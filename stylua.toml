@@ -1,0 +1,8 @@
+syntax = "Lua51"
+column_width = 120
+line_endings = "Unix"
+indent_type = "Tabs"
+call_parentheses = "None"
+collapse_simple_statement = "ConditionalOnly"
+space_after_function_names = "Never"
+quote_style = "AutoPreferSingle" # How ironic
