@@ -3,6 +3,7 @@
 
 _G.hotbar_switching = {
 	default_controls = true,
+	silent = false,
 }
 
 --- If your mod implements a situation where hotbar switching is not acceptable, you can modify this function
@@ -45,6 +46,12 @@ function hotbar_switching.switch(player, row)
 	end
 
 	inv:set_list(listname, new_list)
+
+	local controls_text = ''
+	if hotbar_switching.default_controls == true then
+		controls_text = '(Use sneak+aux1+right click to move up, sneak+aux1+left click to move down)'
+	end
+	core.chat_send_player(player:get_player_name(), '[hotbar_switching] Moved your hotbar. ' .. controls_text)
 end
 
 -- core.get_modpath over core.global_exists in this case because `controls` is a super generic name

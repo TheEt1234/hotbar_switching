@@ -26,6 +26,7 @@ Also i didn't want to reinvent the wheel again.
 ## API
 - `hotbar_switching` - a table, contains everything
 - `hotbar_switching.default_controls = true` - enable default controls
+- `hotbar_switching.silent = false` - By default, hotbar switching will announce when a hotbar is switched
 - `hotbar_switching.can_player_switch(player)` - Can the player switch their hotbar to another row
     - `player` is an ObjectRef (player)
     - returns a boolean, by default always returns `true`
