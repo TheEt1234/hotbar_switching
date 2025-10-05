@@ -42,7 +42,7 @@ function hotbar_switching.switch(player, row)
 	local new_list = {}
 
 	for i = 1, list_size do
-		new_list[i] = list[(i + from_index) % list_size]
+		new_list[i] = list[(((i + from_index) - 1) % list_size) + 1]
 	end
 
 	inv:set_list(listname, new_list)
